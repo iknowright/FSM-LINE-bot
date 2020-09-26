@@ -1,1 +1,1 @@
-web: gunicorn toc-ta:app
+web: gunicorn --workers=1 wsgi:app
