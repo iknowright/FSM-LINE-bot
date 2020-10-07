@@ -1,10 +1,12 @@
 import os
 
+from dotenv import load_dotenv
 from linebot import LineBotApi
 from linebot.models import TextSendMessage, ImageSendMessage
 from linebot.exceptions import LineBotApiError
 
 
+load_dotenv()
 FSM_GRAPH_URL = os.environ.get("FSM_GRAPH_URL")
 line_bot_api = LineBotApi(os.environ.get("LINE_CHANNEL_ACCESS_TOKEN"))
 
